@@ -1,0 +1,99 @@
+{
+  "sgdz_account": {
+    "description": "松果账号（主账号）",
+    "type": "string",
+    "default": "",
+    "obvious_hint": true,
+    "hint": "必须是松果电子主账号；子账号/共享账号没有 API 权限，会一直返回「账号或密码错误」。"
+  },
+  "sgdz_password": {
+    "description": "松果密码",
+    "type": "string",
+    "default": "",
+    "obvious_hint": true,
+    "hint": "只从配置读取，日志不会打印明文。"
+  },
+  "device_name": {
+    "description": "设备名",
+    "type": "string",
+    "default": "",
+    "obvious_hint": true,
+    "hint": "填松果控制台里那台设备的名字，必须完全一致。不知道叫什么就先发 /nas 设备 看列表再复制。"
+  },
+  "allowed_users": {
+    "description": "允许使用的用户ID（白名单）",
+    "type": "list",
+    "default": [],
+    "hint": "填你的用户ID（如 o9cq…@im.wechat）。留空时只有管理员能用。"
+  },
+  "timeout": {
+    "description": "请求超时（秒）",
+    "type": "int",
+    "default": 15,
+    "hint": "网络不好可以调到 20~30。"
+  },
+  "cooldown_sec": {
+    "description": "同一动作最小间隔（秒）",
+    "type": "int",
+    "default": 8,
+    "hint": "防止连点导致开机卡指令堆积，默认 8 秒。"
+  },
+  "body_mode": {
+    "description": "【高级】请求体编码方式",
+    "type": "string",
+    "default": "quote",
+    "options": [
+      "quote",
+      "data_field"
+    ],
+    "hint": "quote＝整段 JSON 直接 urlencode 后发送（官方文档写法）；data_field＝额外包一层 data=…，仅当官方接口改版时才用。"
+  },
+  "value_power_on": {
+    "description": "【高级】开机 value",
+    "type": "int",
+    "default": 1,
+    "hint": "标准款开机卡固定为 1。换型号再改。"
+  },
+  "value_power_off": {
+    "description": "【高级】关机 value",
+    "type": "int",
+    "default": 0,
+    "hint": "标准款固定为 0。"
+  },
+  "value_query": {
+    "description": "【高级】查询状态 value",
+    "type": "int",
+    "default": 11,
+    "hint": "标准款固定为 11，返回 1=开机、0=关机。"
+  },
+  "value_reboot": {
+    "description": "【高级】重启 value",
+    "type": "int",
+    "default": 25,
+    "hint": "标准款固定为 25。"
+  },
+  "value_force_off": {
+    "description": "【高级】强制关机 value",
+    "type": "int",
+    "default": 14,
+    "hint": "标准款固定为 14（强制断电，有损坏文件风险）。"
+  },
+  "monitor_enable": {
+    "description": "【高级】开启巡检推送",
+    "type": "bool",
+    "default": false,
+    "hint": "定时查状态，状态发生变化时主动推送。"
+  },
+  "monitor_interval_min": {
+    "description": "【高级】巡检间隔（分钟）",
+    "type": "int",
+    "default": 10,
+    "hint": "最小 3 分钟。"
+  },
+  "monitor_umo": {
+    "description": "【高级】巡检推送到哪（留空＝自动）",
+    "type": "string",
+    "default": "",
+    "hint": "留空就行，插件会自动用你最近一次跟它说话的会话来推。只有想换到别的群/别的号时才需要手填。"
+  }
+}
