@@ -168,6 +168,7 @@ astrbot_plugin_songguo_power/
 
 ## 十一、更新记录
 
+- **v1.1.2** 作者信息更正为「轩宇（xuanyu）」，同步 LICENSE 与元数据
 - **v1.1.1** 增加「官方资料」章节：各型号安装配网教程、开放 API 文档、音箱联动教程，以及型号与 value 的对应说明
 - **v1.1.0** 文档改为通用开源写法（不假设设备名、不绑定品牌）；补充设备名确认流程与常见问题
 - **v1.0.0** 首版：状态查询、开机、关机、重启、强制关机、设备列表、二次确认、白名单、巡检推送
@@ -233,3 +234,6 @@ MIT License。欢迎提 issue / PR，二改二发请保留原作者信息。
 
 - [小智设备桥接](https://github.com/xuanyu1937/astrbot_plugin_xiaozhi_bridge) —— 同一作者的 AstrBot 插件
 
+## 作者
+
+轩宇（GitHub: [xuanyu1937](https://github.com/xuanyu1937)）

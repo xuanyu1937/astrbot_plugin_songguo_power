@@ -44,9 +44,9 @@ CONFIRM_TTL = 90  # 二次确认有效期（秒）
 
 @register(
     "astrbot_plugin_songguo_power",
-    "彭语涵",
+    "轩宇(xuanyu)",
     "松果电子开机卡：控制飞牛 NAS 开关机与状态查询",
-    "1.1.1",
+    "1.1.2",
 )
 class SongguoPower(Star):
     def __init__(self, context: Context, config: dict | None = None):

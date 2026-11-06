@@ -11,7 +11,14 @@ help: |
   /nas 设备        拉取设备列表，核对设备名
   /nas 确认        确认执行挂起的操作
   只有白名单里的用户可以使用。
-version: v1.1.1
-author: 彭语涵
+support_platforms:
+  - aiocqhttp
+  - weixin_oc
+  - webchat
+  - telegram
+  - wecom
+  - qq_official
+version: v1.1.2
+author: 轩宇（xuanyu）
 repo: ""
 astrbot_version: ">=4.26.1"
